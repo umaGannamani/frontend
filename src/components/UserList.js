@@ -17,7 +17,7 @@ const UserList = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <UserForm
         editingUser={editingUser}
         setEditingUser={setEditingUser}
@@ -27,8 +27,8 @@ const UserList = () => {
         {users.map((user) => (
           <li key={user.id}>
             {user.firstName} {user.lastName} ({user.email}) - {user.department}
-            <button onClick={() => setEditingUser(user)}>Edit</button>
-            <button onClick={() => deleteUser(user.id)}>Delete</button>
+            <button className="button" onClick={() => setEditingUser(user)}>Edit</button>
+            <button className="button" onClick={() => deleteUser(user.id)}>Delete</button>
           </li>
         ))}
       </ul>
